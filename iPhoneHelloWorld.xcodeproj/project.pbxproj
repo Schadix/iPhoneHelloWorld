@@ -24,16 +24,16 @@
 		ABB16A6213CF7BEC00D76DFB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ABB16A6413CF7BEC00D76DFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ABB16A6613CF7BEC00D76DFB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		ABB16A6A13CF7BEC00D76DFB /* iPhoneHelloWorld-Info.plist */ = {isa = PBXFileReference; path = "iPhoneHelloWorld-Info.plist"; sourceTree = "<group>"; };
+		ABB16A6A13CF7BEC00D76DFB /* iPhoneHelloWorld-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iPhoneHelloWorld-Info.plist"; sourceTree = "<group>"; };
 		ABB16A6C13CF7BEC00D76DFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		ABB16A6E13CF7BEC00D76DFB /* iPhoneHelloWorld-Prefix.pch */ = {isa = PBXFileReference; path = "iPhoneHelloWorld-Prefix.pch"; sourceTree = "<group>"; };
+		ABB16A6E13CF7BEC00D76DFB /* iPhoneHelloWorld-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iPhoneHelloWorld-Prefix.pch"; sourceTree = "<group>"; };
 		ABB16A6F13CF7BEC00D76DFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		ABB16A7113CF7BEC00D76DFB /* iPhoneHelloWorldAppDelegate.h */ = {isa = PBXFileReference; path = iPhoneHelloWorldAppDelegate.h; sourceTree = "<group>"; };
+		ABB16A7113CF7BEC00D76DFB /* iPhoneHelloWorldAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPhoneHelloWorldAppDelegate.h; sourceTree = "<group>"; };
 		ABB16A7213CF7BEC00D76DFB /* iPhoneHelloWorldAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPhoneHelloWorldAppDelegate.m; sourceTree = "<group>"; };
-		ABB16A7513CF7BEC00D76DFB /* iPhoneHelloWorldAppDelegate_iPhone.h */ = {isa = PBXFileReference; name = iPhoneHelloWorldAppDelegate_iPhone.h; path = iPhone/iPhoneHelloWorldAppDelegate_iPhone.h; sourceTree = "<group>"; };
+		ABB16A7513CF7BEC00D76DFB /* iPhoneHelloWorldAppDelegate_iPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = iPhoneHelloWorldAppDelegate_iPhone.h; path = iPhone/iPhoneHelloWorldAppDelegate_iPhone.h; sourceTree = "<group>"; };
 		ABB16A7613CF7BEC00D76DFB /* iPhoneHelloWorldAppDelegate_iPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = iPhoneHelloWorldAppDelegate_iPhone.m; path = iPhone/iPhoneHelloWorldAppDelegate_iPhone.m; sourceTree = "<group>"; };
 		ABB16A7913CF7BEC00D76DFB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPhone/en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
-		ABB16A7C13CF7BEC00D76DFB /* iPhoneHelloWorldAppDelegate_iPad.h */ = {isa = PBXFileReference; name = iPhoneHelloWorldAppDelegate_iPad.h; path = iPad/iPhoneHelloWorldAppDelegate_iPad.h; sourceTree = "<group>"; };
+		ABB16A7C13CF7BEC00D76DFB /* iPhoneHelloWorldAppDelegate_iPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = iPhoneHelloWorldAppDelegate_iPad.h; path = iPad/iPhoneHelloWorldAppDelegate_iPad.h; sourceTree = "<group>"; };
 		ABB16A7D13CF7BEC00D76DFB /* iPhoneHelloWorldAppDelegate_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = iPhoneHelloWorldAppDelegate_iPad.m; path = iPad/iPhoneHelloWorldAppDelegate_iPad.m; sourceTree = "<group>"; };
 		ABB16A8013CF7BEC00D76DFB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
