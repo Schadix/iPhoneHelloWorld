@@ -1,0 +1,103 @@
+http://www.codeproject.com/Articles/39119/Consuming-a-RESTful-Service-bit-ly-in-an-iPhone-Ap
+
+http://developer.apple.com/library/ios/#samplecode/SeismicXML/Introduction/Intro.html
+
+http://allseeing-i.com/ASIHTTPRequest/Cloud-Files
+
+http://iphoneonrails.com/
+
+http://forums.macrumors.com/showthread.php?t=767115
+
+
+
+
+
+
+
+
+
+
+
+
+
+- (void)getPickUpLinesFromWebService{
+[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:TRUE];
+NSString *URLstr = GET_PICKUP_LINES_URL;
+
+NSURL *theURL = [NSURL URLWithString:URLstr];
+NSURLRequest *theRequest = [NSURLRequest requestWithURL:theURL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
+
+NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+
+if(theConnection){
+responseData = [[NSMutableData data] retain];
+}
+else{
+[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:FALSE];
+}
+
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
+[responseData appendData:data];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection{
+[self parsePickUpLines:responseData];
+[connection release];
+[responseData release];
+}
+
+- (void)parsePickUpLines:(NSData *)pickUpLinesXMLData{
+if(pickUpLinesParser)
+[pickUpLinesParser release];
+pickUpLinesParser = [[NSXMLParser alloc] initWithData:pickUpLinesXMLData];
+[pickUpLinesParser setDelegate:self];
+[pickUpLinesParser setShouldResolveExternalEntities:NO];
+[pickUpLinesParser parse];
+}
+
+
+
+
+
+
+
+##########
+POST
+
+- (void)SomeServiceMethod
+{
+NSData *thumbsupData = [[NSString stringWithFormat:
+@"<rootElement> \
+<element> \
+<line_id>%@</line_id> \
+<thumbsup>%@</thumbsup> \
+</element> \
+</rootElement>",  line_id]
+dataUsingEncoding: NSASCIIStringEncoding];
+
+
+
+NSString *URLstr = SOME_URL;
+NSURL *theURL = [NSURL URLWithString:URLstr];
+
+NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:theURL];
+
+[theRequest setHTTPMethod:@"POST"];
+[theRequest setValue:@"text/xml"forHTTPHeaderField:@"Content-type"];
+[theRequest setHTTPBody:thumbsupData];
+
+[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:TRUE];
+
+NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+if(!theConnection){
+NSLog(@"Error, Invalid Request");
+
+}
+}
+
+test
+
+
+

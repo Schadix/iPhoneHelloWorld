@@ -19,6 +19,7 @@
 		ABB16A8113CF7BEC00D76DFB /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABB16A7F13CF7BEC00D76DFB /* MainWindow_iPad.xib */; };
 		ABB16A8A13CF847300D76DFB /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB16A8813CF847300D76DFB /* MyViewController.m */; };
 		ABB16A8B13CF847300D76DFB /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABB16A8913CF847300D76DFB /* MyViewController.xib */; };
+		ABB16A8D13CF9E0000D76DFB /* README in Resources */ = {isa = PBXBuildFile; fileRef = ABB16A8C13CF9E0000D76DFB /* README */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		ABB16A8713CF847300D76DFB /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		ABB16A8813CF847300D76DFB /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		ABB16A8913CF847300D76DFB /* MyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
+		ABB16A8C13CF9E0000D76DFB /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		ABB16A5313CF7BEC00D76DFB = {
 			isa = PBXGroup;
 			children = (
+				ABB16A8C13CF9E0000D76DFB /* README */,
 				ABB16A6813CF7BEC00D76DFB /* iPhoneHelloWorld */,
 				ABB16A6113CF7BEC00D76DFB /* Frameworks */,
 				ABB16A5F13CF7BEC00D76DFB /* Products */,
@@ -181,6 +184,7 @@
 				ABB16A7A13CF7BEC00D76DFB /* MainWindow_iPhone.xib in Resources */,
 				ABB16A8113CF7BEC00D76DFB /* MainWindow_iPad.xib in Resources */,
 				ABB16A8B13CF847300D76DFB /* MyViewController.xib in Resources */,
+				ABB16A8D13CF9E0000D76DFB /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
