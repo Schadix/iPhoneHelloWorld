@@ -76,19 +76,20 @@
 }
 
 - (void)getPickUpLinesFromWebService{
-    NSString *urlString = @"http://schadix.heroku.com/people/1.json";
+    NSString *urlString = @"http://schadix.heroku.com/people/2.json";
     NSURL *url = [[NSURL alloc] initWithString:urlString];
     NSString *result = [[NSString alloc] initWithContentsOfURL:url];
     
     
     SBJsonParser *parser = [[SBJsonParser alloc] init];
-    SBJsonWriter *writer = [[SBJsonWriter alloc] init];
+
+    NSDictionary *dict = (NSDictionary*)[parser objectWithString:result];
+
+    NSString *user = [[dict objectForKey:@"person"] objectForKey:@"name"];
+
+    label.text = user;
     
-    id object = [parser objectWithString:result];
-    label.text = [writer stringWithObject:object];
     
-    
-    [writer release];
     [parser release];
     [urlString release];
     [url release];
