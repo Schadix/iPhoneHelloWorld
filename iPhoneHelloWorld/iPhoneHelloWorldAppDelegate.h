@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MyViewController;
 
 @interface iPhoneHelloWorldAppDelegate : NSObject <UIApplicationDelegate> {
 
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+
+@property (nonatomic, retain) MyViewController *myViewController;
 
 @end

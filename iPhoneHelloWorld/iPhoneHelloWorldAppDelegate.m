@@ -7,15 +7,23 @@
 //
 
 #import "iPhoneHelloWorldAppDelegate.h"
+#import "MyViewController.h"
 
 @implementation iPhoneHelloWorldAppDelegate
 
-
 @synthesize window=_window;
+@synthesize myViewController=_myViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    MyViewController *aViewController = [[MyViewController alloc] initWithNibName:@"MyViewController" bundle:[NSBundle mainBundle]];
+    [self setMyViewController:aViewController];
+    [aViewController release];
+    
+    self.window.rootViewController = self.myViewController;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -61,6 +69,7 @@
 
 - (void)dealloc
 {
+    [_myViewController release];
     [_window release];
     [super dealloc];
 }
