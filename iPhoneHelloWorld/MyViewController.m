@@ -7,6 +7,7 @@
 //
 
 #import "MyViewController.h"
+#import "SBJson.h"
 
 
 @implementation MyViewController
@@ -63,14 +64,7 @@
 }
 
 - (IBAction)changeGreeting:(id)sender {
-    self.userName = textField.text;
-    NSString *nameString = self.userName;
-    if ([nameString length] == 0){
-        nameString = @"World";
-    }
-    NSString *greeting = [[NSString alloc] initWithFormat:@"Hello, %@!", nameString];
-    label.text = greeting;
-    [greeting release];
+    [self getPickUpLinesFromWebService];
 }
 
 
@@ -82,10 +76,20 @@
 }
 
 - (void)getPickUpLinesFromWebService{
-    NSString *urlString = @"http://schadix.heroku.com/people/1.xml";
+    NSString *urlString = @"http://schadix.heroku.com/people/1.json";
     NSURL *url = [[NSURL alloc] initWithString:urlString];
     NSString *result = [[NSString alloc] initWithContentsOfURL:url];
-    label.text = result;
+    
+    
+    SBJsonParser *parser = [[SBJsonParser alloc] init];
+    SBJsonWriter *writer = [[SBJsonWriter alloc] init];
+    
+    id object = [parser objectWithString:result];
+    label.text = [writer stringWithObject:object];
+    
+    
+    [writer release];
+    [parser release];
     [urlString release];
     [url release];
     [result release];
