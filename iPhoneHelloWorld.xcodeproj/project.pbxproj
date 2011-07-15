@@ -32,6 +32,7 @@
 		ABB16AB113CFA4B400D76DFB /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB16AA313CFA4B400D76DFB /* SBJsonTokeniser.m */; };
 		ABB16AB213CFA4B400D76DFB /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB16AA513CFA4B400D76DFB /* SBJsonUTF8Stream.m */; };
 		ABB16AB313CFA4B400D76DFB /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB16AA713CFA4B400D76DFB /* SBJsonWriter.m */; };
+		ABB16AB613CFCE5300D76DFB /* NamesList.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB16AB513CFCE5300D76DFB /* NamesList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,8 @@
 		ABB16AA513CFA4B400D76DFB /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		ABB16AA613CFA4B400D76DFB /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		ABB16AA713CFA4B400D76DFB /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		ABB16AB413CFCE5300D76DFB /* NamesList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NamesList.h; sourceTree = "<group>"; };
+		ABB16AB513CFCE5300D76DFB /* NamesList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NamesList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,8 @@
 				ABB16A8713CF847300D76DFB /* MyViewController.h */,
 				ABB16A8813CF847300D76DFB /* MyViewController.m */,
 				ABB16A8913CF847300D76DFB /* MyViewController.xib */,
+				ABB16AB413CFCE5300D76DFB /* NamesList.h */,
+				ABB16AB513CFCE5300D76DFB /* NamesList.m */,
 			);
 			path = iPhoneHelloWorld;
 			sourceTree = "<group>";
@@ -282,6 +287,7 @@
 				ABB16AB113CFA4B400D76DFB /* SBJsonTokeniser.m in Sources */,
 				ABB16AB213CFA4B400D76DFB /* SBJsonUTF8Stream.m in Sources */,
 				ABB16AB313CFA4B400D76DFB /* SBJsonWriter.m in Sources */,
+				ABB16AB613CFCE5300D76DFB /* NamesList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

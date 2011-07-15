@@ -12,7 +12,6 @@
 
 @implementation MyViewController
 @synthesize textField;
-@synthesize label;
 @synthesize userName;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -27,7 +26,6 @@
 - (void)dealloc
 {
     [textField release];
-    [label release];
     [userName release];
     [super dealloc];
 }
@@ -51,7 +49,6 @@
 - (void)viewDidUnload
 {
     [self setTextField:nil];
-    [self setLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -76,26 +73,28 @@
 }
 
 - (void)getPickUpLinesFromWebService{
-    NSString *urlString = @"http://schadix.heroku.com/people/2.json";
+    NSString *urlString = @"http://schadix.heroku.com/people.json";
     NSURL *url = [[NSURL alloc] initWithString:urlString];
     NSString *result = [[NSString alloc] initWithContentsOfURL:url];
     
-    
     SBJsonParser *parser = [[SBJsonParser alloc] init];
-
+	
     NSDictionary *dict = (NSDictionary*)[parser objectWithString:result];
-
-    NSString *user = [[dict objectForKey:@"person"] objectForKey:@"name"];
-
-    label.text = user;
+    NSMutableArray *a = [[NSMutableArray alloc] init];
+    NSString *user = [[NSString alloc] init];
     
+    for (NSDictionary *o in dict) {
+        user = [[o objectForKey:@"person"] objectForKey:@"name"];
+        [a addObject:user];
+    }
     
+    [a release];
+    //[dict release];
     [parser release];
-    [urlString release];
-    [url release];
     [result release];
+    [url release];
+    [urlString release];
 }
-
 
 
 @end
