@@ -33,6 +33,10 @@
 		ABB16AB213CFA4B400D76DFB /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB16AA513CFA4B400D76DFB /* SBJsonUTF8Stream.m */; };
 		ABB16AB313CFA4B400D76DFB /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB16AA713CFA4B400D76DFB /* SBJsonWriter.m */; };
 		ABB16AB613CFCE5300D76DFB /* NamesList.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB16AB513CFCE5300D76DFB /* NamesList.m */; };
+		ABB16AF413D23EB000D76DFB /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB16AF313D23EB000D76DFB /* Person.m */; };
+		ABB16AF713D23FCA00D76DFB /* Weight.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB16AF613D23FCA00D76DFB /* Weight.m */; };
+		ABB16AFA13D246EF00D76DFB /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB16AF913D246EE00D76DFB /* People.m */; };
+		ABB16AFD13D24E9A00D76DFB /* PeopleDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB16AFC13D24E9900D76DFB /* PeopleDatasource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +87,14 @@
 		ABB16AA713CFA4B400D76DFB /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		ABB16AB413CFCE5300D76DFB /* NamesList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NamesList.h; sourceTree = "<group>"; };
 		ABB16AB513CFCE5300D76DFB /* NamesList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NamesList.m; sourceTree = "<group>"; };
+		ABB16AF213D23EB000D76DFB /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		ABB16AF313D23EB000D76DFB /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		ABB16AF513D23FCA00D76DFB /* Weight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weight.h; sourceTree = "<group>"; };
+		ABB16AF613D23FCA00D76DFB /* Weight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weight.m; sourceTree = "<group>"; };
+		ABB16AF813D246EE00D76DFB /* People.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
+		ABB16AF913D246EE00D76DFB /* People.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = People.m; sourceTree = "<group>"; };
+		ABB16AFB13D24E9800D76DFB /* PeopleDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleDatasource.h; sourceTree = "<group>"; };
+		ABB16AFC13D24E9900D76DFB /* PeopleDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleDatasource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +142,10 @@
 		ABB16A6813CF7BEC00D76DFB /* iPhoneHelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				ABB16AFE13D24EA100D76DFB /* DataSource */,
+				ABB16AB413CFCE5300D76DFB /* NamesList.h */,
+				ABB16AB513CFCE5300D76DFB /* NamesList.m */,
+				ABB16AF113D23E4700D76DFB /* DataModel */,
 				ABB16A8E13CFA48B00D76DFB /* json */,
 				ABB16A7113CF7BEC00D76DFB /* iPhoneHelloWorldAppDelegate.h */,
 				ABB16A7213CF7BEC00D76DFB /* iPhoneHelloWorldAppDelegate.m */,
@@ -139,8 +155,6 @@
 				ABB16A8713CF847300D76DFB /* MyViewController.h */,
 				ABB16A8813CF847300D76DFB /* MyViewController.m */,
 				ABB16A8913CF847300D76DFB /* MyViewController.xib */,
-				ABB16AB413CFCE5300D76DFB /* NamesList.h */,
-				ABB16AB513CFCE5300D76DFB /* NamesList.m */,
 			);
 			path = iPhoneHelloWorld;
 			sourceTree = "<group>";
@@ -206,6 +220,28 @@
 				ABB16AA713CFA4B400D76DFB /* SBJsonWriter.m */,
 			);
 			name = json;
+			sourceTree = "<group>";
+		};
+		ABB16AF113D23E4700D76DFB /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				ABB16AF213D23EB000D76DFB /* Person.h */,
+				ABB16AF313D23EB000D76DFB /* Person.m */,
+				ABB16AF513D23FCA00D76DFB /* Weight.h */,
+				ABB16AF613D23FCA00D76DFB /* Weight.m */,
+				ABB16AF813D246EE00D76DFB /* People.h */,
+				ABB16AF913D246EE00D76DFB /* People.m */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		ABB16AFE13D24EA100D76DFB /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				ABB16AFB13D24E9800D76DFB /* PeopleDatasource.h */,
+				ABB16AFC13D24E9900D76DFB /* PeopleDatasource.m */,
+			);
+			name = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +324,10 @@
 				ABB16AB213CFA4B400D76DFB /* SBJsonUTF8Stream.m in Sources */,
 				ABB16AB313CFA4B400D76DFB /* SBJsonWriter.m in Sources */,
 				ABB16AB613CFCE5300D76DFB /* NamesList.m in Sources */,
+				ABB16AF413D23EB000D76DFB /* Person.m in Sources */,
+				ABB16AF713D23FCA00D76DFB /* Weight.m in Sources */,
+				ABB16AFA13D246EF00D76DFB /* People.m in Sources */,
+				ABB16AFD13D24E9A00D76DFB /* PeopleDatasource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

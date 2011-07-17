@@ -12,11 +12,12 @@
 @interface MyViewController : UIViewController <UITextFieldDelegate> {
     
     UITextField *textField;
+    UITableView *tableView;
 }
 - (IBAction)changeGreeting:(id)sender;
 - (void)getPickUpLinesFromWebService;
 
-
+@property (nonatomic, retain) IBOutlet UITableView *tableView;
 @property (nonatomic, retain) IBOutlet UITextField *textField;
 @property (nonatomic, copy) NSString *userName;
 

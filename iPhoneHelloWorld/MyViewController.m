@@ -8,17 +8,19 @@
 
 #import "MyViewController.h"
 #import "SBJson.h"
+#import "PeopleDatasource.h"
 
 
 @implementation MyViewController
+@synthesize tableView;
 @synthesize textField;
 @synthesize userName;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
+        
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -27,6 +29,7 @@
 {
     [textField release];
     [userName release];
+    [tableView release];
     [super dealloc];
 }
 
@@ -44,11 +47,17 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+
+    PeopleDatasource *pds = [[PeopleDatasource alloc] init];
+    [self.tableView setDataSource:pds];
+    [self.tableView reloadData];
+
 }
 
 - (void)viewDidUnload
 {
     [self setTextField:nil];
+    [self setTableView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
