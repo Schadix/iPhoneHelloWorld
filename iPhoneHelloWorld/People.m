@@ -15,9 +15,9 @@
 @synthesize people;
 
 // Singleton
-static NSMutableArray *instance=nil;
+static People *instance=nil;
 
-+ (NSMutableArray *)getAll
++ (People *)getInstance
 {
     @synchronized(self) {
         static dispatch_once_t pred;
@@ -36,11 +36,21 @@ static NSMutableArray *instance=nil;
     return nil; //on subsequent allocation attempts return nil
 }
 
+- (NSMutableArray *) getAll{
+    return people;
+}
+
 
 
 - init{
+    people = [[NSMutableArray alloc] init];
+    
     Person *karin = [[Person alloc] init];
     Person *martin = [[Person alloc] init];
+    
+    martin.name = @"martin";
+    karin.name = @"karin";
+    
     Weight *w = [[Weight alloc] init];
     [w setWeight:140.0];
     [w setWeightDate:[[NSDate alloc] init]];
@@ -53,11 +63,19 @@ static NSMutableArray *instance=nil;
     
     [martin.weight addObject:w1];
     
+    [people addObject:martin];
+    [people addObject:karin];
+    
     [w1 release];
     [w release];
     [martin release];
     [karin release];
     return self;
+}
+
+- (void)dealloc{
+    [people release];
+    [super dealloc];
 }
 
 @end

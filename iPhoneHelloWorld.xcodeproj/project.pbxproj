@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB8405E613D378C6003239F9 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8405E413D378C6003239F9 /* MyTableViewController.m */; };
+		AB8405E713D378C6003239F9 /* MyTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8405E513D378C6003239F9 /* MyTableViewController.xib */; };
 		ABB16A6313CF7BEC00D76DFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB16A6213CF7BEC00D76DFB /* UIKit.framework */; };
 		ABB16A6513CF7BEC00D76DFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB16A6413CF7BEC00D76DFB /* Foundation.framework */; };
 		ABB16A6713CF7BEC00D76DFB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB16A6613CF7BEC00D76DFB /* CoreGraphics.framework */; };
@@ -40,6 +42,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB8405E313D378C5003239F9 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTableViewController.h; path = ../MyTableViewController.h; sourceTree = "<group>"; };
+		AB8405E413D378C6003239F9 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTableViewController.m; path = ../MyTableViewController.m; sourceTree = "<group>"; };
+		AB8405E513D378C6003239F9 /* MyTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyTableViewController.xib; path = ../MyTableViewController.xib; sourceTree = "<group>"; };
 		ABB16A5E13CF7BEC00D76DFB /* iPhoneHelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhoneHelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB16A6213CF7BEC00D76DFB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ABB16A6413CF7BEC00D76DFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -142,6 +147,9 @@
 		ABB16A6813CF7BEC00D76DFB /* iPhoneHelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				AB8405E313D378C5003239F9 /* MyTableViewController.h */,
+				AB8405E413D378C6003239F9 /* MyTableViewController.m */,
+				AB8405E513D378C6003239F9 /* MyTableViewController.xib */,
 				ABB16AFE13D24EA100D76DFB /* DataSource */,
 				ABB16AB413CFCE5300D76DFB /* NamesList.h */,
 				ABB16AB513CFCE5300D76DFB /* NamesList.m */,
@@ -296,6 +304,7 @@
 				ABB16A8113CF7BEC00D76DFB /* MainWindow_iPad.xib in Resources */,
 				ABB16A8B13CF847300D76DFB /* MyViewController.xib in Resources */,
 				ABB16A8D13CF9E0000D76DFB /* README in Resources */,
+				AB8405E713D378C6003239F9 /* MyTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +337,7 @@
 				ABB16AF713D23FCA00D76DFB /* Weight.m in Sources */,
 				ABB16AFA13D246EF00D76DFB /* People.m in Sources */,
 				ABB16AFD13D24E9A00D76DFB /* PeopleDatasource.m in Sources */,
+				AB8405E613D378C6003239F9 /* MyTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +452,7 @@
 				ABB16A8613CF7BEC00D76DFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

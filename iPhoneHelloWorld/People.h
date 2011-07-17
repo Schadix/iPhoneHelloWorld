@@ -15,6 +15,7 @@
 
 @property (nonatomic, retain) NSMutableArray *people;
 
-+ (NSMutableArray *) getAll;
++ (People *) getInstance;
+- (NSMutableArray *) getAll;
 
 @end

@@ -14,7 +14,9 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView  numberOfRowsInSection:(NSInteger)section {
-    return [[People getAll] count];
+    People *a = [People getInstance] ;
+    NSInteger peoplecount = [[a getAll]count];
+    return peoplecount;
     
 }
 
@@ -30,12 +32,11 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier] autorelease];
     }
-    NSMutableArray *a = [People getAll];
+    NSMutableArray *a = [[People getInstance] getAll];
     Person *p = [a objectAtIndex:indexPath.row];
     cell.textLabel.text = p.name; 
     return cell;
 }
-
 
 
 @end

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class MyViewController;
+@class MyTableViewController;
 
 @interface iPhoneHelloWorldAppDelegate : NSObject <UIApplicationDelegate> {
 
@@ -16,5 +17,7 @@
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
 @property (nonatomic, retain) MyViewController *myViewController;
+
+@property (nonatomic, retain) MyTableViewController *myTableViewController;
 
 @end

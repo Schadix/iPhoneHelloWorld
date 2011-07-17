@@ -8,11 +8,13 @@
 
 #import "iPhoneHelloWorldAppDelegate.h"
 #import "MyViewController.h"
+#import "MyTableViewController.h"
 
 @implementation iPhoneHelloWorldAppDelegate
 
 @synthesize window=_window;
 @synthesize myViewController=_myViewController;
+@synthesize myTableViewController=_myTableViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -22,7 +24,12 @@
     [self setMyViewController:aViewController];
     [aViewController release];
     
+    MyTableViewController *aTableViewController = [[MyTableViewController alloc] initWithNibName:@"MyTableViewController" bundle:[NSBundle mainBundle]];
+    [self setMyTableViewController:aTableViewController];
+    [aTableViewController release];
+    
     self.window.rootViewController = self.myViewController;
+    //self.window.rootViewController = self.myTableViewController;
     
     [self.window makeKeyAndVisible];
     return YES;
