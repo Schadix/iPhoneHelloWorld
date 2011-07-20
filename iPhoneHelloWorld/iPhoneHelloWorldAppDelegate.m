@@ -13,6 +13,7 @@
 @implementation iPhoneHelloWorldAppDelegate
 
 @synthesize window=_window;
+@synthesize navigationController=_navigationController;
 @synthesize myViewController=_myViewController;
 @synthesize myTableViewController=_myTableViewController;
 
@@ -26,12 +27,21 @@
     
     MyTableViewController *aTableViewController = [[MyTableViewController alloc] initWithNibName:@"MyTableViewController" bundle:[NSBundle mainBundle]];
     [self setMyTableViewController:aTableViewController];
-    [aTableViewController release];
     
-    self.window.rootViewController = self.myViewController;
-    //self.window.rootViewController = self.myTableViewController;
+    
+    self.navigationController = [[UINavigationController alloc]
+                            initWithRootViewController:aTableViewController];
+    
+    [aTableViewController release];
+    //self.window.rootViewController = self.myViewController;
+    //self.window.rootViewController =self.myTableViewController;
+
+    [self.window addSubview:self.navigationController.view];
     
     [self.window makeKeyAndVisible];
+    
+    
+    
     return YES;
 }
 

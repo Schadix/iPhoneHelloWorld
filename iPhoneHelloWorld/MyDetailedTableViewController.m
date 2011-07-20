@@ -1,24 +1,24 @@
 //
-//  MyTableViewController.m
+//  MyDetailedTableViewController.m
 //  iPhoneHelloWorld
 //
 //  Created by Martin Schade on 7/17/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "MyTableViewController.h"
 #import "MyDetailedTableViewController.h"
-#import "People.h"
-#import "Person.h"
 
 
-@implementation MyTableViewController
+@implementation MyDetailedTableViewController
+
+@synthesize selectedPerson;
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self];
+        
     }
     return self;
 }
@@ -84,12 +84,8 @@
 
 #pragma mark - Table view data source
 
-
 - (NSInteger)tableView:(UITableView *)tableView  numberOfRowsInSection:(NSInteger)section {
-    People *a = [People getInstance] ;
-    NSInteger peoplecount = [[a getAll]count];
-    return peoplecount;
-    
+    return [selectedPerson.weight count];    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -104,12 +100,9 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier] autorelease];
     }
-    NSMutableArray *a = [[People getInstance] getAll];
-    Person *p = [a objectAtIndex:indexPath.row];
-    cell.textLabel.text = p.name; 
+    cell.textLabel.text =  [NSString stringWithFormat:@"%f", [[selectedPerson.weight objectAtIndex:indexPath.row] weight]]; 
     return cell;
 }
-
 
 /*
 // Override to support conditional editing of the table view.
@@ -154,16 +147,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     // Navigation logic may go here. Create and push another view controller.
-    
-     MyDetailedTableViewController *detailViewController = [[MyDetailedTableViewController alloc] initWithNibName:@"MyDetailedTableViewController" bundle:nil];
-    
-    
-    [detailViewController setSelectedPerson:[[[People getInstance] getAll] objectAtIndex:indexPath.row]];
-
+    /*
+     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      [detailViewController release];
+     */
 }
 
 @end

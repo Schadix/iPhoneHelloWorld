@@ -40,7 +40,16 @@ static People *instance=nil;
     return people;
 }
 
+- (Person *) getPersonByName: (NSString *) name{
+    for (Person *p in people){
+        if ([p.name isEqualToString:name]) return p;
+    }
+    return nil;
+}
 
+- (Person *) getPersonById: (NSInteger) id{
+    return [people objectAtIndex:id];
+}
 
 - init{
     people = [[NSMutableArray alloc] init];

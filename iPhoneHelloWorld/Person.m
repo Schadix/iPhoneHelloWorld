@@ -14,4 +14,17 @@
 @synthesize weight;
 @synthesize name;
 
+- (id)init {
+    self = [super init];
+    if (self) {
+        weight = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+- (void)dealloc {
+    [weight dealloc];
+    [super dealloc];
+}
+
 @end

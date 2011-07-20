@@ -1,16 +1,16 @@
 //
-//  PeopleDatasource.m
+//  PersonDataSource.m
 //  iPhoneHelloWorld
 //
-//  Created by Martin Schade on 7/16/11.
+//  Created by Martin Schade on 7/17/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "PeopleDatasource.h"
+#import "PersonDataSource.h"
 #import "People.h"
 #import "Person.h"
 
-@implementation PeopleDatasource
+@implementation PersonDataSource
 
 
 - (NSInteger)tableView:(UITableView *)tableView  numberOfRowsInSection:(NSInteger)section {
@@ -37,7 +37,6 @@
     cell.textLabel.text = p.name; 
     return cell;
 }
-
 
 
 @end
