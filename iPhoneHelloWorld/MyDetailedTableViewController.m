@@ -7,7 +7,7 @@
 //
 
 #import "MyDetailedTableViewController.h"
-
+#import "Weight.h"
 
 @implementation MyDetailedTableViewController
 
@@ -100,7 +100,8 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier] autorelease];
     }
-    cell.textLabel.text =  [NSString stringWithFormat:@"%f", [[selectedPerson.weight objectAtIndex:indexPath.row] weight]]; 
+    Weight *w =[selectedPerson.weight objectAtIndex:indexPath.row];
+    cell.textLabel.text =  [NSString stringWithFormat:@"%f", w.weight]; 
     return cell;
 }
 

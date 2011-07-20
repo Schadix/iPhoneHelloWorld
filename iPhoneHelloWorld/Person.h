@@ -11,7 +11,7 @@
 
 @interface Person : NSObject {
     NSString *name;
-    NSMutableArray *weight; //type Weight
+@public    NSMutableArray *weight; //type Weight
 }
 
 @property (nonatomic, retain) NSString *name;
