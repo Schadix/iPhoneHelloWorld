@@ -41,6 +41,7 @@ static People *instance=nil;
     return people;
 }
 
+#warning "this is a lazy impl, fixme by using hashmap on personlist"
 - (Person *) getPersonByName: (NSString *) name{
     for (Person *p in people){
         if ([p.name isEqualToString:name]) return p;
