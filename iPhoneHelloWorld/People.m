@@ -66,16 +66,18 @@ static People *instance=nil;
     
     [karin.weight addObject:w];
 
-    Weight *w1 = [[Weight alloc] init];
-    [w1 setWeight:155.0];
-    [w1 setWeightDate:[[NSDate alloc] init]];
+    for (int i=0; i<10; i++) {
+        Weight *w1 = [[Weight alloc] init];
+        [w1 setWeight:153];
+        [w1 setWeightDate:[[NSDate alloc] init]];
+        [martin.weight addObject:w1];
+        [w1 release];
+    }
     
-    [martin.weight addObject:w1];
     
     [people addObject:martin];
     [people addObject:karin];
     
-    [w1 release];
     [w release];
     [martin release];
     [karin release];
