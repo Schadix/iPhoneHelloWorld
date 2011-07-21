@@ -9,6 +9,7 @@
 #import "People.h"
 #import "Person.h"
 #import "Weight.h"
+#include "stdlib.h"
 
 @implementation People
 
@@ -59,16 +60,18 @@ static People *instance=nil;
     
     martin.name = @"martin";
     karin.name = @"karin";
-    
-    Weight *w = [[Weight alloc] init];
-    [w setWeight:140.0];
-    [w setWeightDate:[[NSDate alloc] init]];
-    
-    [karin.weight addObject:w];
 
     for (int i=0; i<10; i++) {
+        Weight *w = [[Weight alloc] init];
+        [w setWeight:((arc4random() % 15) + 138)];
+        [w setWeightDate:[[NSDate alloc] init]];
+        [karin.weight addObject:w];
+        [w release];
+    }
+    
+    for (int i=0; i<100; i++) {
         Weight *w1 = [[Weight alloc] init];
-        [w1 setWeight:153];
+        [w1 setWeight:((arc4random() % 15) + 148)];
         [w1 setWeightDate:[[NSDate alloc] init]];
         [martin.weight addObject:w1];
         [w1 release];
@@ -78,7 +81,6 @@ static People *instance=nil;
     [people addObject:martin];
     [people addObject:karin];
     
-    [w release];
     [martin release];
     [karin release];
     return self;

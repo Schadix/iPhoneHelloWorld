@@ -18,7 +18,6 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self];
     }
     return self;
 }
