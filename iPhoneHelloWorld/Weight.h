@@ -11,7 +11,7 @@
 
 @interface Weight : NSObject {
     NSDate *weightDate;
-    double weight;
+@public double weight;
 }
 
 @property (nonatomic, retain) NSDate *weightDate;

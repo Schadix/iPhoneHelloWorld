@@ -85,7 +85,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView  numberOfRowsInSection:(NSInteger)section {
-    return [selectedPerson.weight count];    
+    return [selectedPerson.weights count];    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -100,7 +100,8 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier] autorelease];
     }
-    Weight *w =[selectedPerson.weight objectAtIndex:indexPath.row];
+    
+    Weight *w =[selectedPerson.weights objectAtIndex:indexPath.row];
     cell.textLabel.text =  [NSString stringWithFormat:@"%f", w.weight]; 
     return cell;
 }

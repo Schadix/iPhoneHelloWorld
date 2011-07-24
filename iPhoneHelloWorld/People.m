@@ -10,7 +10,7 @@
 #import "Person.h"
 #import "Weight.h"
 #include "stdlib.h"
-#include "SBJsonParser.h";
+#include "SBJsonParser.h"
 
 @implementation People
 
@@ -54,9 +54,31 @@ static People *instance=nil;
     return [people objectAtIndex:id];
 }
 
+////- (Person *) getPersonWithWeight: (NSInteger) id{
+////    NSString *urlString = [NSString stringWithFormat:@"http://schadix.heroku.com/people/%d.json", id];
+////    NSURL *url = [[NSURL alloc] initWithString:urlString];
+////    NSString *result = [[NSString alloc] initWithContentsOfURL:url];
+////    
+////    SBJsonParser *parser = [[SBJsonParser alloc] init];
+////    
+////    NSDictionary *dict = (NSDictionary*)[parser objectWithString:result];
+////    NSDictionary *weights = [[dict objectForKey:@"person"] objectForKey:@"weights"];
+////    for (NSDictionary *w in weights){
+////        NSString *weight = [dict objectForKey:@"weight"];
+//////        getPersonById
+////    }
+//    
+//        
+//    
+//    [parser release];
+//    [result release];
+//    [url release];
+//    [urlString release];
+//}
+
 // RESTful call
 - init{
-    @try {
+        people = [[NSMutableArray alloc] init];
         NSString *urlString = @"http://schadix.heroku.com/people.json";
         NSURL *url = [[NSURL alloc] initWithString:urlString];
         NSString *result = [[NSString alloc] initWithContentsOfURL:url];
@@ -66,12 +88,21 @@ static People *instance=nil;
         NSDictionary *dict = (NSDictionary*)[parser objectWithString:result];
         
         for (NSDictionary *o in dict) {
-            NSString *user = [[NSString alloc] init];
-            user = [[o objectForKey:@"person"] objectForKey:@"name"];
-            NSDictionary *weight = [[o objectForKey:@"weight"] objectForKey:@"weight"];
+            NSString *username = [[NSString alloc] init];
+            NSString *userid = [[NSString alloc] init];
+            username = [[o objectForKey:@"person"] objectForKey:@"name"];
+            userid = [[o objectForKey:@"person"] objectForKey:@"id"];
             
-            [people addObject:user];
-            [user release];
+            
+//            NSDictionary *weight = [[o objectForKey:@"person"] objectForKey:@"weight"];
+           
+            Person *p = [[Person alloc]init];
+            p.name = username;
+            p.userid = [userid intValue];
+            [people addObject:p];
+            [p release];
+            [userid release];
+            [username release];
         }
         
         //[dict release];
@@ -79,13 +110,6 @@ static People *instance=nil;
         [result release];
         [url release];
         [urlString release];
-    }
-    @catch (NSException *exception) {
-        NSLog(@"error");
-    }
-    @finally {
-        NSLog(@"finally");
-    }
     return self;
 }
 

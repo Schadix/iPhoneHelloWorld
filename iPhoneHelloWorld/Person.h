@@ -11,10 +11,12 @@
 
 @interface Person : NSObject {
     NSString *name;
-@public    NSMutableArray *weight; //type Weight
+    int userid;
+@public    NSMutableArray *weights; //type Weight
 }
 
 @property (nonatomic, retain) NSString *name;
-@property (nonatomic, retain) NSMutableArray *weight;
+@property (nonatomic, retain) NSMutableArray *weights;
+@property (nonatomic) int userid;
 
 @end
