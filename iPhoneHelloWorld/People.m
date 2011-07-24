@@ -10,6 +10,7 @@
 #import "Person.h"
 #import "Weight.h"
 #include "stdlib.h"
+#include "SBJsonParser.h";
 
 @implementation People
 
@@ -53,37 +54,38 @@ static People *instance=nil;
     return [people objectAtIndex:id];
 }
 
+// RESTful call
 - init{
-    people = [[NSMutableArray alloc] init];
-    
-    Person *karin = [[Person alloc] init];
-    Person *martin = [[Person alloc] init];
-    
-    martin.name = @"martin";
-    karin.name = @"karin";
-
-    for (int i=0; i<10; i++) {
-        Weight *w = [[Weight alloc] init];
-        [w setWeight:((arc4random() % 15) + 138)];
-        [w setWeightDate:[[NSDate alloc] init]];
-        [karin.weight addObject:w];
-        [w release];
+    @try {
+        NSString *urlString = @"http://schadix.heroku.com/people.json";
+        NSURL *url = [[NSURL alloc] initWithString:urlString];
+        NSString *result = [[NSString alloc] initWithContentsOfURL:url];
+        
+        SBJsonParser *parser = [[SBJsonParser alloc] init];
+        
+        NSDictionary *dict = (NSDictionary*)[parser objectWithString:result];
+        
+        for (NSDictionary *o in dict) {
+            NSString *user = [[NSString alloc] init];
+            user = [[o objectForKey:@"person"] objectForKey:@"name"];
+            NSDictionary *weight = [[o objectForKey:@"weight"] objectForKey:@"weight"];
+            
+            [people addObject:user];
+            [user release];
+        }
+        
+        //[dict release];
+        [parser release];
+        [result release];
+        [url release];
+        [urlString release];
     }
-    
-    for (int i=0; i<100; i++) {
-        Weight *w1 = [[Weight alloc] init];
-        [w1 setWeight:((arc4random() % 15) + 148)];
-        [w1 setWeightDate:[[NSDate alloc] init]];
-        [martin.weight addObject:w1];
-        [w1 release];
+    @catch (NSException *exception) {
+        NSLog(@"error");
     }
-    
-    
-    [people addObject:martin];
-    [people addObject:karin];
-    
-    [martin release];
-    [karin release];
+    @finally {
+        NSLog(@"finally");
+    }
     return self;
 }
 
