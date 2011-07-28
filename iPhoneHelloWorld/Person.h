@@ -12,11 +12,13 @@
 @interface Person : NSObject {
     NSString *name;
     int userid;
+@public NSDate *lastUpdatedWeights;
 @public    NSMutableArray *weights; //type Weight
 }
 
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSMutableArray *weights;
 @property (nonatomic) int userid;
+@property (nonatomic, retain) NSDate *lastUpdatedWeights;
 
 @end
