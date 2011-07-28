@@ -35,7 +35,6 @@
     [weights retain];
 }
 
-#warning fix retain count on setter and selfweight
 -(NSMutableArray* ) weights
 {
     if (weights == nil || ([lastUpdatedWeights compare:[NSDate date]] == NSOrderedAscending)){
