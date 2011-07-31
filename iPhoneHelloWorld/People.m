@@ -54,32 +54,10 @@ static People *instance=nil;
     return [people objectAtIndex:id];
 }
 
-////- (Person *) getPersonWithWeight: (NSInteger) id{
-////    NSString *urlString = [NSString stringWithFormat:@"http://schadix.heroku.com/people/%d.json", id];
-////    NSURL *url = [[NSURL alloc] initWithString:urlString];
-////    NSString *result = [[NSString alloc] initWithContentsOfURL:url];
-////    
-////    SBJsonParser *parser = [[SBJsonParser alloc] init];
-////    
-////    NSDictionary *dict = (NSDictionary*)[parser objectWithString:result];
-////    NSDictionary *weights = [[dict objectForKey:@"person"] objectForKey:@"weights"];
-////    for (NSDictionary *w in weights){
-////        NSString *weight = [dict objectForKey:@"weight"];
-//////        getPersonById
-////    }
-//    
-//        
-//    
-//    [parser release];
-//    [result release];
-//    [url release];
-//    [urlString release];
-//}
-
 // RESTful call
 - init{
         people = [[NSMutableArray alloc] init];
-        NSString *urlString = @"http://schadix.heroku.com/people.json";
+        NSString *urlString = @"http://localhost:3000/people.json";
         NSURL *url = [[NSURL alloc] initWithString:urlString];
         NSString *result = [[NSString alloc] initWithContentsOfURL:url];
         
@@ -92,10 +70,6 @@ static People *instance=nil;
             NSString *userid = [[NSString alloc] init];
             username = [[o objectForKey:@"person"] objectForKey:@"name"];
             userid = [[o objectForKey:@"person"] objectForKey:@"id"];
-            
-            
-//            NSDictionary *weight = [[o objectForKey:@"person"] objectForKey:@"weight"];
-           
             Person *p = [[Person alloc]init];
             p.name = username;
             p.userid = [userid intValue];
@@ -105,7 +79,6 @@ static People *instance=nil;
             [username release];
         }
         
-        //[dict release];
         [parser release];
         [result release];
         [url release];

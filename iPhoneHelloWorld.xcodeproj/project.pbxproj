@@ -12,6 +12,14 @@
 		AB8405F413D3C5C2003239F9 /* MyDetailedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8405F213D3C5C1003239F9 /* MyDetailedTableViewController.m */; };
 		AB8405F513D3C5C2003239F9 /* MyDetailedTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8405F313D3C5C1003239F9 /* MyDetailedTableViewController.xib */; };
 		AB8405F813D3C622003239F9 /* PersonDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8405F713D3C622003239F9 /* PersonDataSource.m */; };
+		ABAAFAE313E5C8D600334541 /* libRestKitJSONParserJSONKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABAAFADF13E5C8D600334541 /* libRestKitJSONParserJSONKit.a */; };
+		ABAAFAE413E5C8D600334541 /* libRestKitNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABAAFAE013E5C8D600334541 /* libRestKitNetwork.a */; };
+		ABAAFAE513E5C8D600334541 /* libRestKitObjectMapping.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABAAFAE113E5C8D600334541 /* libRestKitObjectMapping.a */; };
+		ABAAFAE613E5C8D600334541 /* libRestKitSupport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABAAFAE213E5C8D600334541 /* libRestKitSupport.a */; };
+		ABAAFAE813E5C8E700334541 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABAAFAE713E5C8E700334541 /* CFNetwork.framework */; };
+		ABAAFAEA13E5C8F700334541 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABAAFAE913E5C8F700334541 /* MobileCoreServices.framework */; };
+		ABAAFAEC13E5C90400334541 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABAAFAEB13E5C90400334541 /* SystemConfiguration.framework */; };
+		ABAAFAEE13E5C91B00334541 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ABAAFAED13E5C91B00334541 /* libxml2.dylib */; };
 		ABB16A6313CF7BEC00D76DFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB16A6213CF7BEC00D76DFB /* UIKit.framework */; };
 		ABB16A6513CF7BEC00D76DFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB16A6413CF7BEC00D76DFB /* Foundation.framework */; };
 		ABB16A6713CF7BEC00D76DFB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB16A6613CF7BEC00D76DFB /* CoreGraphics.framework */; };
@@ -44,6 +52,93 @@
 		ABB16AFD13D24E9A00D76DFB /* PeopleDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB16AFC13D24E9900D76DFB /* PeopleDatasource.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		ABAAFAC613E5C5CA00334541 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABAAFAB213E5C5C900334541 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 253A07FC1255161B00976E89;
+			remoteInfo = RestKitNetwork;
+		};
+		ABAAFAC813E5C5CA00334541 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABAAFAB213E5C5C900334541 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 253A08031255162C00976E89;
+			remoteInfo = RestKitObjectMapping;
+		};
+		ABAAFACA13E5C5CA00334541 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABAAFAB213E5C5C900334541 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 253A080C12551D3000976E89;
+			remoteInfo = RestKitSupport;
+		};
+		ABAAFACC13E5C5CA00334541 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABAAFAB213E5C5C900334541 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 20808DBD13DE8CDC000A156A;
+			remoteInfo = "RestKitJSONParser+NXJSON";
+		};
+		ABAAFACE13E5C5CA00334541 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABAAFAB213E5C5C900334541 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2590E64F125231F600531FA8;
+			remoteInfo = "RestKitJSONParser+YAJL";
+		};
+		ABAAFAD013E5C5CA00334541 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABAAFAB213E5C5C900334541 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2590E66B1252353700531FA8;
+			remoteInfo = "RestKitJSONParser+SBJSON";
+		};
+		ABAAFAD213E5C5CA00334541 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABAAFAB213E5C5C900334541 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 73057FD11331AD2E001908EE;
+			remoteInfo = "RestKitJSONParser+JSONKit";
+		};
+		ABAAFAD413E5C5CA00334541 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABAAFAB213E5C5C900334541 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25BD43BD1340315800DBACDD;
+			remoteInfo = "RestKitXMLParser+Libxml";
+		};
+		ABAAFAD613E5C5CA00334541 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABAAFAB213E5C5C900334541 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 253A081412551D5300976E89;
+			remoteInfo = RestKitCoreData;
+		};
+		ABAAFAD813E5C5CA00334541 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABAAFAB213E5C5C900334541 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2523360511E79F090048F9B4;
+			remoteInfo = RestKitThree20;
+		};
+		ABAAFADA13E5C5CA00334541 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABAAFAB213E5C5C900334541 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3F6C39A510FE5C95008F47C5;
+			remoteInfo = UISpec;
+		};
+		ABAAFADD13E5C81700334541 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABAAFAB213E5C5C900334541 /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 255B7588133BABBF00ED76AD;
+			remoteInfo = RestKit;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		AB8405E313D378C5003239F9 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTableViewController.h; path = ../MyTableViewController.h; sourceTree = "<group>"; };
 		AB8405E413D378C6003239F9 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTableViewController.m; path = ../MyTableViewController.m; sourceTree = "<group>"; };
@@ -53,6 +148,15 @@
 		AB8405F313D3C5C1003239F9 /* MyDetailedTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyDetailedTableViewController.xib; sourceTree = "<group>"; };
 		AB8405F613D3C622003239F9 /* PersonDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonDataSource.h; sourceTree = "<group>"; };
 		AB8405F713D3C622003239F9 /* PersonDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonDataSource.m; sourceTree = "<group>"; };
+		ABAAFAB213E5C5C900334541 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
+		ABAAFADF13E5C8D600334541 /* libRestKitJSONParserJSONKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRestKitJSONParserJSONKit.a; sourceTree = SOURCE_ROOT; };
+		ABAAFAE013E5C8D600334541 /* libRestKitNetwork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRestKitNetwork.a; sourceTree = SOURCE_ROOT; };
+		ABAAFAE113E5C8D600334541 /* libRestKitObjectMapping.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRestKitObjectMapping.a; sourceTree = SOURCE_ROOT; };
+		ABAAFAE213E5C8D600334541 /* libRestKitSupport.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRestKitSupport.a; sourceTree = SOURCE_ROOT; };
+		ABAAFAE713E5C8E700334541 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		ABAAFAE913E5C8F700334541 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		ABAAFAEB13E5C90400334541 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		ABAAFAED13E5C91B00334541 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		ABB16A5E13CF7BEC00D76DFB /* iPhoneHelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhoneHelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB16A6213CF7BEC00D76DFB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ABB16A6413CF7BEC00D76DFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -115,6 +219,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABAAFAEE13E5C91B00334541 /* libxml2.dylib in Frameworks */,
+				ABAAFAEC13E5C90400334541 /* SystemConfiguration.framework in Frameworks */,
+				ABAAFAEA13E5C8F700334541 /* MobileCoreServices.framework in Frameworks */,
+				ABAAFAE813E5C8E700334541 /* CFNetwork.framework in Frameworks */,
+				ABAAFAE313E5C8D600334541 /* libRestKitJSONParserJSONKit.a in Frameworks */,
+				ABAAFAE413E5C8D600334541 /* libRestKitNetwork.a in Frameworks */,
+				ABAAFAE513E5C8D600334541 /* libRestKitObjectMapping.a in Frameworks */,
+				ABAAFAE613E5C8D600334541 /* libRestKitSupport.a in Frameworks */,
 				ABB16A6313CF7BEC00D76DFB /* UIKit.framework in Frameworks */,
 				ABB16A6513CF7BEC00D76DFB /* Foundation.framework in Frameworks */,
 				ABB16A6713CF7BEC00D76DFB /* CoreGraphics.framework in Frameworks */,
@@ -124,9 +236,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ABAAFAB313E5C5C900334541 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABAAFAC713E5C5CA00334541 /* libRestKitNetwork.a */,
+				ABAAFAC913E5C5CA00334541 /* libRestKitObjectMapping.a */,
+				ABAAFACB13E5C5CA00334541 /* libRestKitSupport.a */,
+				ABAAFACD13E5C5CA00334541 /* libRestKitJSONParser+NXJSON.a */,
+				ABAAFACF13E5C5CA00334541 /* libRestKitJSONParserYAJL.a */,
+				ABAAFAD113E5C5CA00334541 /* libRestKitJSONParserSBJSON.a */,
+				ABAAFAD313E5C5CA00334541 /* libRestKitJSONParserJSONKit.a */,
+				ABAAFAD513E5C5CA00334541 /* libRestKitXMLParserLibxml.a */,
+				ABAAFAD713E5C5CA00334541 /* libRestKitCoreData.a */,
+				ABAAFAD913E5C5CA00334541 /* libRestKitThree20.a */,
+				ABAAFADB13E5C5CA00334541 /* UISpec.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		ABB16A5313CF7BEC00D76DFB = {
 			isa = PBXGroup;
 			children = (
+				ABAAFAED13E5C91B00334541 /* libxml2.dylib */,
+				ABAAFAEB13E5C90400334541 /* SystemConfiguration.framework */,
+				ABAAFAE913E5C8F700334541 /* MobileCoreServices.framework */,
+				ABAAFAE713E5C8E700334541 /* CFNetwork.framework */,
+				ABAAFADF13E5C8D600334541 /* libRestKitJSONParserJSONKit.a */,
+				ABAAFAE013E5C8D600334541 /* libRestKitNetwork.a */,
+				ABAAFAE113E5C8D600334541 /* libRestKitObjectMapping.a */,
+				ABAAFAE213E5C8D600334541 /* libRestKitSupport.a */,
+				ABAAFAB213E5C5C900334541 /* RestKit.xcodeproj */,
 				ABB16A8C13CF9E0000D76DFB /* README */,
 				ABB16A6813CF7BEC00D76DFB /* iPhoneHelloWorld */,
 				ABB16A6113CF7BEC00D76DFB /* Frameworks */,
@@ -279,6 +418,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				ABAAFADE13E5C81700334541 /* PBXTargetDependency */,
 			);
 			name = iPhoneHelloWorld;
 			productName = iPhoneHelloWorld;
@@ -300,12 +440,99 @@
 			mainGroup = ABB16A5313CF7BEC00D76DFB;
 			productRefGroup = ABB16A5F13CF7BEC00D76DFB /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = ABAAFAB313E5C5C900334541 /* Products */;
+					ProjectRef = ABAAFAB213E5C5C900334541 /* RestKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				ABB16A5D13CF7BEC00D76DFB /* iPhoneHelloWorld */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		ABAAFAC713E5C5CA00334541 /* libRestKitNetwork.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitNetwork.a;
+			remoteRef = ABAAFAC613E5C5CA00334541 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ABAAFAC913E5C5CA00334541 /* libRestKitObjectMapping.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitObjectMapping.a;
+			remoteRef = ABAAFAC813E5C5CA00334541 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ABAAFACB13E5C5CA00334541 /* libRestKitSupport.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitSupport.a;
+			remoteRef = ABAAFACA13E5C5CA00334541 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ABAAFACD13E5C5CA00334541 /* libRestKitJSONParser+NXJSON.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			name = "libRestKitJSONParser+NXJSON.a";
+			path = libRestKitJSONParserNXJSON.a;
+			remoteRef = ABAAFACC13E5C5CA00334541 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ABAAFACF13E5C5CA00334541 /* libRestKitJSONParserYAJL.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitJSONParserYAJL.a;
+			remoteRef = ABAAFACE13E5C5CA00334541 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ABAAFAD113E5C5CA00334541 /* libRestKitJSONParserSBJSON.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitJSONParserSBJSON.a;
+			remoteRef = ABAAFAD013E5C5CA00334541 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ABAAFAD313E5C5CA00334541 /* libRestKitJSONParserJSONKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitJSONParserJSONKit.a;
+			remoteRef = ABAAFAD213E5C5CA00334541 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ABAAFAD513E5C5CA00334541 /* libRestKitXMLParserLibxml.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitXMLParserLibxml.a;
+			remoteRef = ABAAFAD413E5C5CA00334541 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ABAAFAD713E5C5CA00334541 /* libRestKitCoreData.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitCoreData.a;
+			remoteRef = ABAAFAD613E5C5CA00334541 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ABAAFAD913E5C5CA00334541 /* libRestKitThree20.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKitThree20.a;
+			remoteRef = ABAAFAD813E5C5CA00334541 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ABAAFADB13E5C5CA00334541 /* UISpec.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = UISpec.app;
+			remoteRef = ABAAFADA13E5C5CA00334541 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		ABB16A5C13CF7BEC00D76DFB /* Resources */ = {
@@ -359,6 +586,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		ABAAFADE13E5C81700334541 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RestKit;
+			targetProxy = ABAAFADD13E5C81700334541 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		ABB16A6B13CF7BEC00D76DFB /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -399,7 +634,14 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/RestKit/Build";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = "\"$(SOURCE_CODE)/RestKit/Build/$(BUILD_STYLE)-$(PLATFORM_NAME)\"";
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -414,8 +656,14 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/RestKit/Build";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = "\"$(SOURCE_CODE)/RestKit/Build/$(BUILD_STYLE)-$(PLATFORM_NAME)\"";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -430,6 +678,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iPhoneHelloWorld/iPhoneHelloWorld-Prefix.pch";
 				INFOPLIST_FILE = "iPhoneHelloWorld/iPhoneHelloWorld-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -443,6 +695,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iPhoneHelloWorld/iPhoneHelloWorld-Prefix.pch";
 				INFOPLIST_FILE = "iPhoneHelloWorld/iPhoneHelloWorld-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;

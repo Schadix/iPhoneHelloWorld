@@ -14,6 +14,7 @@
     int userid;
 @public NSDate *lastUpdatedWeights;
 @public    NSMutableArray *weights; //type Weight
+@public NSDate *lastUpdatedWeights;    
 }
 
 @property (nonatomic, retain) NSString *name;
