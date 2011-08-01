@@ -8,17 +8,26 @@
 
 #import "MyDetailedTableViewController.h"
 #import "Weight.h"
+#import <RestKit/RestKit.h>
 
 @implementation MyDetailedTableViewController
 
 @synthesize selectedPerson;
 
-
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
+        RKObjectManager* objectManager = [RKObjectManager objectManagerWithBaseURL:@"http://localhost:3000"];
         
+        RKObjectMapping* taskMapping = [RKObjectMapping mappingForClass:[Weight class]];
+        [taskMapping mapKeyPath:@"created_at" toAttribute:@"created_at"];
+        [taskMapping mapKeyPath:@"date" toAttribute:@"weightDate"];
+        [taskMapping mapKeyPath:@"id" toAttribute:@"weight_id"];
+        [taskMapping mapKeyPath:@"person_id" toAttribute:@"person_id"];
+        [taskMapping mapKeyPath:@"updated_at" toAttribute:@"updated_at"];
+        [taskMapping mapKeyPath:@"weight" toAttribute:@"weight"];
+        [objectManager.mappingProvider setMapping:taskMapping forKeyPath:@"weights"];
     }
     return self;
 }
@@ -64,6 +73,17 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    @try {
+        [[RKObjectManager sharedManager] loadObjectsAtResourcePath:[NSString stringWithFormat:@"/people/%d.json", selectedPerson.userid] delegate:self];
+
+    }
+    @catch (NSException *exception) {
+        NSLog(@"%@", exception.accessibilityHint);
+    }
+    @finally {
+    }
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -105,6 +125,20 @@
     cell.textLabel.text =  [NSString stringWithFormat:@"%f", w.weight]; 
     return cell;
 }
+
+
+
+// ------------------------------
+- (void)objectLoader:(RKObjectLoader*)objectLoader didLoadObjects:(NSArray*)objects{
+    selectedPerson.weights = objects;
+    [self.tableView reloadData];
+}
+
+- (void)objectLoader:(RKObjectLoader*)objectLoader didFailWithError:(NSError*)error{
+    NSLog(@"Error %@", error.accessibilityHint);
+}
+
+
 
 /*
 // Override to support conditional editing of the table view.

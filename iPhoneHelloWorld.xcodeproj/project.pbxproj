@@ -257,14 +257,6 @@
 		ABB16A5313CF7BEC00D76DFB = {
 			isa = PBXGroup;
 			children = (
-				ABAAFAED13E5C91B00334541 /* libxml2.dylib */,
-				ABAAFAEB13E5C90400334541 /* SystemConfiguration.framework */,
-				ABAAFAE913E5C8F700334541 /* MobileCoreServices.framework */,
-				ABAAFAE713E5C8E700334541 /* CFNetwork.framework */,
-				ABAAFADF13E5C8D600334541 /* libRestKitJSONParserJSONKit.a */,
-				ABAAFAE013E5C8D600334541 /* libRestKitNetwork.a */,
-				ABAAFAE113E5C8D600334541 /* libRestKitObjectMapping.a */,
-				ABAAFAE213E5C8D600334541 /* libRestKitSupport.a */,
 				ABAAFAB213E5C5C900334541 /* RestKit.xcodeproj */,
 				ABB16A8C13CF9E0000D76DFB /* README */,
 				ABB16A6813CF7BEC00D76DFB /* iPhoneHelloWorld */,
@@ -284,6 +276,14 @@
 		ABB16A6113CF7BEC00D76DFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ABAAFAED13E5C91B00334541 /* libxml2.dylib */,
+				ABAAFAEB13E5C90400334541 /* SystemConfiguration.framework */,
+				ABAAFAE913E5C8F700334541 /* MobileCoreServices.framework */,
+				ABAAFAE713E5C8E700334541 /* CFNetwork.framework */,
+				ABAAFADF13E5C8D600334541 /* libRestKitJSONParserJSONKit.a */,
+				ABAAFAE013E5C8D600334541 /* libRestKitNetwork.a */,
+				ABAAFAE113E5C8D600334541 /* libRestKitObjectMapping.a */,
+				ABAAFAE213E5C8D600334541 /* libRestKitSupport.a */,
 				ABB16A6213CF7BEC00D76DFB /* UIKit.framework */,
 				ABB16A6413CF7BEC00D76DFB /* Foundation.framework */,
 				ABB16A6613CF7BEC00D76DFB /* CoreGraphics.framework */,

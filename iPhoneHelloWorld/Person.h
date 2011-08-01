@@ -7,18 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <RestKit/RestKit.h>
 
 
 @interface Person : NSObject {
     NSString *name;
     int userid;
-@public NSDate *lastUpdatedWeights;
-@public    NSMutableArray *weights; //type Weight
+@public    NSArray *weights; //type Weight
 @public NSDate *lastUpdatedWeights;    
 }
 
 @property (nonatomic, retain) NSString *name;
-@property (nonatomic, retain) NSMutableArray *weights;
+@property (nonatomic, retain) NSArray *weights;
 @property (nonatomic) int userid;
 @property (nonatomic, retain) NSDate *lastUpdatedWeights;
 

@@ -66,17 +66,13 @@ static People *instance=nil;
         NSDictionary *dict = (NSDictionary*)[parser objectWithString:result];
         
         for (NSDictionary *o in dict) {
-            NSString *username = [[NSString alloc] init];
-            NSString *userid = [[NSString alloc] init];
-            username = [[o objectForKey:@"person"] objectForKey:@"name"];
-            userid = [[o objectForKey:@"person"] objectForKey:@"id"];
+            NSString *username =[[o objectForKey:@"person"] objectForKey:@"name"];
+            NSString* userid = [[o objectForKey:@"person"] objectForKey:@"id"];
             Person *p = [[Person alloc]init];
             p.name = username;
             p.userid = [userid intValue];
             [people addObject:p];
             [p release];
-            [userid release];
-            [username release];
         }
         
         [parser release];

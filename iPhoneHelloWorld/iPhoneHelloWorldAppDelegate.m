@@ -34,12 +34,6 @@
                             initWithRootViewController:aTableViewController];
     
     [aTableViewController release];
-    //self.window.rootViewController = self.myViewController;
-    //self.window.rootViewController =self.myTableViewController;
-    
-    RKClient* client = [RKClient clientWithBaseURL:@"http://schadix.heroku.com"];
-    NSLog(@"I am your RKClient singleton : %@", [RKClient sharedClient]); 
-    
     
     [self.window addSubview:self.navigationController.view];
     

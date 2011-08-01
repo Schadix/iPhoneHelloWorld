@@ -50,6 +50,7 @@
 
     PeopleDatasource *pds = [[PeopleDatasource alloc] init];
     [self.tableView setDataSource:pds];
+    [pds release];
     [self.tableView reloadData];
 
 }
@@ -90,7 +91,7 @@
 	
     NSDictionary *dict = (NSDictionary*)[parser objectWithString:result];
     NSMutableArray *a = [[NSMutableArray alloc] init];
-    NSString *user = [[NSString alloc] init];
+    NSString *user;
     
     for (NSDictionary *o in dict) {
         user = [[o objectForKey:@"person"] objectForKey:@"name"];
@@ -98,7 +99,6 @@
     }
     
     [a release];
-    //[dict release];
     [parser release];
     [result release];
     [url release];

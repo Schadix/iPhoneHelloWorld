@@ -13,5 +13,9 @@
 
 @synthesize weight;
 @synthesize weightDate;
+@synthesize created_at;
+@synthesize updated_at;
+@synthesize weight_id;
+@synthesize person_id;
 
 @end

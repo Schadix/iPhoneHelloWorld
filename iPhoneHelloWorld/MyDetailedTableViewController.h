@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Person.h"
 
-@interface MyDetailedTableViewController : UITableViewController {
+@interface MyDetailedTableViewController : UITableViewController <RKObjectLoaderDelegate>{
     Person *selectedPerson;
     
 }
