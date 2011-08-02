@@ -14,21 +14,12 @@
 
 @synthesize selectedPerson;
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        RKObjectManager* objectManager = [RKObjectManager objectManagerWithBaseURL:@"http://localhost:3000"];
-        
-        RKObjectMapping* taskMapping = [RKObjectMapping mappingForClass:[Weight class]];
-        [taskMapping mapKeyPath:@"created_at" toAttribute:@"created_at"];
-        [taskMapping mapKeyPath:@"date" toAttribute:@"weightDate"];
-        [taskMapping mapKeyPath:@"id" toAttribute:@"weight_id"];
-        [taskMapping mapKeyPath:@"person_id" toAttribute:@"person_id"];
-        [taskMapping mapKeyPath:@"updated_at" toAttribute:@"updated_at"];
-        [taskMapping mapKeyPath:@"weight" toAttribute:@"weight"];
-        [objectManager.mappingProvider setMapping:taskMapping forKeyPath:@"weights"];
+        [RKObjectManager objectManagerWithBaseURL:@"http://localhost:3000"];
     }
+    
     return self;
 }
 
@@ -73,17 +64,20 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    @try {
-        [[RKObjectManager sharedManager] loadObjectsAtResourcePath:[NSString stringWithFormat:@"/people/%d.json", selectedPerson.userid] delegate:self];
-
-    }
-    @catch (NSException *exception) {
-        NSLog(@"%@", exception.accessibilityHint);
-    }
-    @finally {
-    }
-
+    NSLog(@"viewDidAppear");
+        RKObjectMapping* taskMapping = [RKObjectMapping mappingForClass:[Weight class]];
+        [taskMapping mapKeyPath:@"created_at" toAttribute:@"created_at"];
+        [taskMapping mapKeyPath:@"date" toAttribute:@"weightDate"];
+        [taskMapping mapKeyPath:@"id" toAttribute:@"weight_id"];
+        [taskMapping mapKeyPath:@"person_id" toAttribute:@"person_id"];
+        [taskMapping mapKeyPath:@"updated_at" toAttribute:@"updated_at"];
+        [taskMapping mapKeyPath:@"weight" toAttribute:@"weight"];
+        
+        [[[RKObjectManager sharedManager] mappingProvider ] setMapping:taskMapping forKeyPath:@"person.weights"];
+        
+        [[RKObjectManager sharedManager] 
+         loadObjectsAtResourcePath:[NSString stringWithFormat:@"/people/%d.json", selectedPerson.userid]
+         delegate:self];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -130,12 +124,25 @@
 
 // ------------------------------
 - (void)objectLoader:(RKObjectLoader*)objectLoader didLoadObjects:(NSArray*)objects{
+    NSLog(@"didLoadObjects");
     selectedPerson.weights = objects;
     [self.tableView reloadData];
 }
 
 - (void)objectLoader:(RKObjectLoader*)objectLoader didFailWithError:(NSError*)error{
     NSLog(@"Error %@", error.accessibilityHint);
+}
+
+- (void)objectLoader:(RKObjectLoader*)objectLoader didLoadObject:(id)object{
+    NSLog(@"didFailWithError");
+}
+
+- (void)objectLoader:(RKObjectLoader*)objectLoader didLoadObjectDictionary:(NSDictionary*)dictionary{
+    NSLog(@"didLoadObjectDictionary");
+}
+
+- (void)objectLoaderDidFinishLoading:(RKObjectLoader*)objectLoader{
+    NSLog(@"objectLoadDidFinishLoading");
 }
 
 
