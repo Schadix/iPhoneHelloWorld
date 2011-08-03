@@ -16,8 +16,21 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
     if (self) {
         [RKObjectManager objectManagerWithBaseURL:@"http://localhost:3000"];
+
+        RKObjectMapping* taskMapping = [RKObjectMapping mappingForClass:[Weight class]];
+        [taskMapping mapKeyPath:@"created_at" toAttribute:@"created_at"];
+        [taskMapping mapKeyPath:@"date" toAttribute:@"weightDate"];
+        [taskMapping mapKeyPath:@"id" toAttribute:@"weight_id"];
+        [taskMapping mapKeyPath:@"person_id" toAttribute:@"person_id"];
+        [taskMapping mapKeyPath:@"updated_at" toAttribute:@"updated_at"];
+        [taskMapping mapKeyPath:@"weight" toAttribute:@"weight"];
+        
+        [[[RKObjectManager sharedManager] mappingProvider ] setMapping:taskMapping forKeyPath:@"person.weights"];
+
+    
     }
     
     return self;
@@ -65,15 +78,6 @@
 {
     [super viewDidAppear:animated];
     NSLog(@"viewDidAppear");
-        RKObjectMapping* taskMapping = [RKObjectMapping mappingForClass:[Weight class]];
-        [taskMapping mapKeyPath:@"created_at" toAttribute:@"created_at"];
-        [taskMapping mapKeyPath:@"date" toAttribute:@"weightDate"];
-        [taskMapping mapKeyPath:@"id" toAttribute:@"weight_id"];
-        [taskMapping mapKeyPath:@"person_id" toAttribute:@"person_id"];
-        [taskMapping mapKeyPath:@"updated_at" toAttribute:@"updated_at"];
-        [taskMapping mapKeyPath:@"weight" toAttribute:@"weight"];
-        
-        [[[RKObjectManager sharedManager] mappingProvider ] setMapping:taskMapping forKeyPath:@"person.weights"];
         
         [[RKObjectManager sharedManager] 
          loadObjectsAtResourcePath:[NSString stringWithFormat:@"/people/%d.json", selectedPerson.userid]
@@ -125,7 +129,7 @@
 // ------------------------------
 - (void)objectLoader:(RKObjectLoader*)objectLoader didLoadObjects:(NSArray*)objects{
     NSLog(@"didLoadObjects");
-    selectedPerson.weights = objects;
+    selectedPerson.weights = [objects retain];
     [self.tableView reloadData];
 }
 
