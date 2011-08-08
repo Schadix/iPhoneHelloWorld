@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Person.h"
+#import <RestKit/RestKit.h>
+#import "AddWeightController.h"
 
 @interface MyDetailedTableViewController : UITableViewController <RKObjectLoaderDelegate>{
     Person *selectedPerson;
@@ -15,6 +17,8 @@
 }
 
 @property (nonatomic, retain) Person *selectedPerson;
+
+- (IBAction)addWeight:(id)sender;
 
 
 @end

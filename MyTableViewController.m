@@ -153,7 +153,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+        // clear singleton instances
+//    [RKClient setSharedClient:nil];
+//    [RKObjectManager setSharedManager:nil];
+//    [RKRequestQueue setSharedQueue:nil];
+
     // Navigation logic may go here. Create and push another view controller.
     
      MyDetailedTableViewController *detailViewController = [[MyDetailedTableViewController alloc] initWithNibName:@"MyDetailedTableViewController" bundle:nil];

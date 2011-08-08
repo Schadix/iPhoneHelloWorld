@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB5C41A313EF221B00B52182 /* AddWeightController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5C41A113EF221B00B52182 /* AddWeightController.m */; };
+		AB5C41A413EF221B00B52182 /* AddWeightController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB5C41A213EF221B00B52182 /* AddWeightController.xib */; };
 		AB8405E613D378C6003239F9 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8405E413D378C6003239F9 /* MyTableViewController.m */; };
 		AB8405E713D378C6003239F9 /* MyTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8405E513D378C6003239F9 /* MyTableViewController.xib */; };
 		AB8405F413D3C5C2003239F9 /* MyDetailedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8405F213D3C5C1003239F9 /* MyDetailedTableViewController.m */; };
@@ -140,6 +142,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB5C41A013EF221B00B52182 /* AddWeightController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddWeightController.h; sourceTree = "<group>"; };
+		AB5C41A113EF221B00B52182 /* AddWeightController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWeightController.m; sourceTree = "<group>"; };
+		AB5C41A213EF221B00B52182 /* AddWeightController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddWeightController.xib; sourceTree = "<group>"; };
 		AB8405E313D378C5003239F9 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTableViewController.h; path = ../MyTableViewController.h; sourceTree = "<group>"; };
 		AB8405E413D378C6003239F9 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTableViewController.m; path = ../MyTableViewController.m; sourceTree = "<group>"; };
 		AB8405E513D378C6003239F9 /* MyTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyTableViewController.xib; path = ../MyTableViewController.xib; sourceTree = "<group>"; };
@@ -236,6 +241,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB5C419F13EF21B700B52182 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB5C41A013EF221B00B52182 /* AddWeightController.h */,
+				AB5C41A113EF221B00B52182 /* AddWeightController.m */,
+				AB5C41A213EF221B00B52182 /* AddWeightController.xib */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		ABAAFAB313E5C5C900334541 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +309,7 @@
 		ABB16A6813CF7BEC00D76DFB /* iPhoneHelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				AB5C419F13EF21B700B52182 /* ViewController */,
 				AB8405E313D378C5003239F9 /* MyTableViewController.h */,
 				AB8405E413D378C6003239F9 /* MyTableViewController.m */,
 				AB8405E513D378C6003239F9 /* MyTableViewController.xib */,
@@ -546,6 +562,7 @@
 				ABB16A8D13CF9E0000D76DFB /* README in Resources */,
 				AB8405E713D378C6003239F9 /* MyTableViewController.xib in Resources */,
 				AB8405F513D3C5C2003239F9 /* MyDetailedTableViewController.xib in Resources */,
+				AB5C41A413EF221B00B52182 /* AddWeightController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +598,7 @@
 				AB8405E613D378C6003239F9 /* MyTableViewController.m in Sources */,
 				AB8405F413D3C5C2003239F9 /* MyDetailedTableViewController.m in Sources */,
 				AB8405F813D3C622003239F9 /* PersonDataSource.m in Sources */,
+				AB5C41A313EF221B00B52182 /* AddWeightController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

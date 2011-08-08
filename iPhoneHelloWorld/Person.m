@@ -7,10 +7,6 @@
 //
 
 #import "Person.h"
-#import "SBJsonParser.h"
-#import "Weight.h"
-#import <RestKit/RestKit.h>
-
 
 @implementation Person
 

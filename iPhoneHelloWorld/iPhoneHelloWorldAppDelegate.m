@@ -11,6 +11,8 @@
 #import "MyTableViewController.h"
 #import <RestKit/RestKit.h>
 
+NSString* gRKCatalogBaseURL = nil;
+
 @implementation iPhoneHelloWorldAppDelegate
 
 @synthesize window=_window;
@@ -20,7 +22,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    gRKCatalogBaseURL = [@"http://localhost:3000" retain];
     
     MyViewController *aViewController = [[MyViewController alloc] initWithNibName:@"MyViewController" bundle:[NSBundle mainBundle]];
     [self setMyViewController:aViewController];
