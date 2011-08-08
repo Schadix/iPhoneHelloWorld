@@ -27,5 +27,4 @@
     [weights release];
     [super dealloc];
 }
-
 @end

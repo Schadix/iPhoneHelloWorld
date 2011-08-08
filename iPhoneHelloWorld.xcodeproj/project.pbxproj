@@ -11,7 +11,6 @@
 		AB5C41A413EF221B00B52182 /* AddWeightController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB5C41A213EF221B00B52182 /* AddWeightController.xib */; };
 		AB8405E613D378C6003239F9 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8405E413D378C6003239F9 /* MyTableViewController.m */; };
 		AB8405E713D378C6003239F9 /* MyTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8405E513D378C6003239F9 /* MyTableViewController.xib */; };
-		AB8405F413D3C5C2003239F9 /* MyDetailedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8405F213D3C5C1003239F9 /* MyDetailedTableViewController.m */; };
 		AB8405F513D3C5C2003239F9 /* MyDetailedTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8405F313D3C5C1003239F9 /* MyDetailedTableViewController.xib */; };
 		AB8405F813D3C622003239F9 /* PersonDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8405F713D3C622003239F9 /* PersonDataSource.m */; };
 		ABAAFAE313E5C8D600334541 /* libRestKitJSONParserJSONKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABAAFADF13E5C8D600334541 /* libRestKitJSONParserJSONKit.a */; };
@@ -52,6 +51,7 @@
 		ABB16AF713D23FCA00D76DFB /* Weight.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB16AF613D23FCA00D76DFB /* Weight.m */; };
 		ABB16AFA13D246EF00D76DFB /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB16AF913D246EE00D76DFB /* People.m */; };
 		ABB16AFD13D24E9A00D76DFB /* PeopleDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB16AFC13D24E9900D76DFB /* PeopleDatasource.m */; };
+		ABB2505313E8275C00D672DF /* MyDetailedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB2505213E8275C00D672DF /* MyDetailedTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -217,6 +217,7 @@
 		ABB16AF913D246EE00D76DFB /* People.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = People.m; sourceTree = "<group>"; };
 		ABB16AFB13D24E9800D76DFB /* PeopleDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleDatasource.h; sourceTree = "<group>"; };
 		ABB16AFC13D24E9900D76DFB /* PeopleDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleDatasource.m; sourceTree = "<group>"; };
+		ABB2505213E8275C00D672DF /* MyDetailedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDetailedTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,7 +328,7 @@
 				ABB16A8813CF847300D76DFB /* MyViewController.m */,
 				ABB16A8913CF847300D76DFB /* MyViewController.xib */,
 				AB8405F113D3C5C1003239F9 /* MyDetailedTableViewController.h */,
-				AB8405F213D3C5C1003239F9 /* MyDetailedTableViewController.m */,
+				ABB2505213E8275C00D672DF /* MyDetailedTableViewController.m */,
 				AB8405F313D3C5C1003239F9 /* MyDetailedTableViewController.xib */,
 			);
 			path = iPhoneHelloWorld;
@@ -598,6 +599,7 @@
 				AB8405E613D378C6003239F9 /* MyTableViewController.m in Sources */,
 				AB8405F413D3C5C2003239F9 /* MyDetailedTableViewController.m in Sources */,
 				AB8405F813D3C622003239F9 /* PersonDataSource.m in Sources */,
+				ABB2505313E8275C00D672DF /* MyDetailedTableViewController.m in Sources */,
 				AB5C41A313EF221B00B52182 /* AddWeightController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
