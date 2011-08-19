@@ -10,7 +10,7 @@
 #import "RestKit/RestKit.h"
 #import "Weight.h"
 
-@interface AddWeightController : UIViewController {
+@interface AddWeightController : UIViewController <RKRequestDelegate> {
     
     UITextField *uiWeight;
     int personId;

@@ -1,3 +1,13 @@
+
+curl post example
+=================
+add weight: curl -H 'Accept: application/json' -H 'Content-Type: application/json' -X POST -d "{weight:{weight:155.0, person_id: 1, date:\"2011-08-19T01:28:14Z\"}}" -i http://localhost:3000/people/1/weights
+delete weight: curl -H 'Accept: application/json' -H 'Content-Type: application/json' -X DELETE -i http://localhost:3000/people/1/weights/16
+
+
+
+
+
 http://www.codeproject.com/Articles/39119/Consuming-a-RESTful-Service-bit-ly-in-an-iPhone-Ap
 
 http://developer.apple.com/library/ios/#samplecode/SeismicXML/Introduction/Intro.html

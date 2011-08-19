@@ -69,12 +69,21 @@
 - (IBAction)addWeight:(id)sender {
     NSLog(@"addWeight: personId: %d", personId);
     
-    Weight *weight = [[Weight alloc] init];
-    weight.weight = [self.uiWeight.text doubleValue];
+    NSMutableDictionary* params = [[NSMutableDictionary alloc] init ];
+    [params setValue:@"155.0" forKey:@"weight"];
+    [params setValue:@"1" forKey:@"person_id"];
+    [params setValue:@"2011-08-19T01:28:14Z" forKey:@"date"];
+    NSMutableDictionary* main= [[NSMutableDictionary alloc] init ];
+    [main setObject:params forKey:@"weight"];
     
-    //[RKObjectManager sharedManager]  postObject:<#(id<NSObject>)#> delegate:<#(id<RKObjectLoaderDelegate>)#>
+    [[RKClient sharedClient] post:@"/people/1/weights" params:main delegate:self];
     
-    [weight release];
+    [main retain];
+    [params retain];
     
 }
+
+- (void)request:(RKRequest*)request didLoadResponse:(RKResponse*)response {  
+    NSLog(@"Retrieved XML: %@", [response bodyAsString]);
+    }
 @end
