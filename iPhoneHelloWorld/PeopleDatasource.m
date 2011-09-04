@@ -8,7 +8,7 @@
 
 #import "PeopleDatasource.h"
 #import "People.h"
-#import "Person.h"
+#import "SDXPerson.h"
 
 @implementation PeopleDatasource
 
@@ -33,7 +33,7 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier] autorelease];
     }
     NSMutableArray *a = [[People getInstance] getAll];
-    Person *p = [a objectAtIndex:indexPath.row];
+    SDXPerson *p = [a objectAtIndex:indexPath.row];
     cell.textLabel.text = p.name; 
     return cell;
 }

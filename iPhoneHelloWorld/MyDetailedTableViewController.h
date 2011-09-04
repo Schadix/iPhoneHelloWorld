@@ -7,16 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Person.h"
+#import "SDXPerson.h"
 #import <RestKit/RestKit.h>
 #import "AddWeightController.h"
 
 @interface MyDetailedTableViewController : UITableViewController <RKObjectLoaderDelegate>{
-    Person *selectedPerson;
+    SDXPerson *selectedPerson;
     
 }
 
-@property (nonatomic, retain) Person *selectedPerson;
+@property (nonatomic, retain) SDXPerson *selectedPerson;
 
 - (IBAction)addWeight:(id)sender;
 

@@ -7,7 +7,7 @@
 //
 
 #import "Weight.h"
-
+#import "RestKit/RestKit.h"
 
 @implementation Weight
 

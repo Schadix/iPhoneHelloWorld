@@ -21,8 +21,6 @@ extern NSString* gRKCatalogBaseURL;
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
     if (self) {
-       // if ([RKObjectManager sharedManager]==nil) 
-       [RKObjectManager objectManagerWithBaseURL:gRKCatalogBaseURL];
         
         UIButton* infoButton = [UIButton buttonWithType:UIBarButtonSystemItemAdd];
         [infoButton addTarget:self action:@selector(showInfoView:) forControlEvents:UIControlEventTouchUpInside];
@@ -87,24 +85,10 @@ extern NSString* gRKCatalogBaseURL;
 {
     [super viewDidAppear:animated];
     NSLog(@"viewDidAppear");
-        
     
-    RKObjectMapping* taskMapping = [RKObjectMapping mappingForClass:[Weight class]];
-    [taskMapping mapKeyPath:@"created_at" toAttribute:@"created_at"];
-    [taskMapping mapKeyPath:@"date" toAttribute:@"weightDate"];
-    [taskMapping mapKeyPath:@"id" toAttribute:@"weight_id"];
-    [taskMapping mapKeyPath:@"person_id" toAttribute:@"person_id"];
-    [taskMapping mapKeyPath:@"updated_at" toAttribute:@"updated_at"];
-    [taskMapping mapKeyPath:@"weight" toAttribute:@"weight"];
-    
-    [[[RKObjectManager sharedManager] mappingProvider ] setMapping:taskMapping forKeyPath:@"person.weights"];
-    
-    
-
-    
-        [[RKObjectManager sharedManager] 
-         loadObjectsAtResourcePath:[NSString stringWithFormat:@"/people/%d.json", selectedPerson.userid]
-         delegate:self];
+    [[RKObjectManager sharedManager] 
+     loadObjectsAtResourcePath:[NSString stringWithFormat:@"/people/%d.json", selectedPerson.userid]
+     delegate:self];
 }
 
 - (void)viewWillDisappear:(BOOL)animated

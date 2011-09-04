@@ -10,6 +10,7 @@
 #import "MyViewController.h"
 #import "MyTableViewController.h"
 #import <RestKit/RestKit.h>
+#import "Weight.h"
 
 NSString* gRKCatalogBaseURL = nil;
 
@@ -41,7 +42,23 @@ NSString* gRKCatalogBaseURL = nil;
     
     [self.window makeKeyAndVisible];
     
+    [RKObjectManager objectManagerWithBaseURL:gRKCatalogBaseURL];
     
+    RKObjectMapping* taskMapping = [RKObjectMapping mappingForClass:[Weight class]];
+    [taskMapping mapKeyPath:@"created_at" toAttribute:@"created_at"];
+    [taskMapping mapKeyPath:@"date" toAttribute:@"weightDate"];
+    [taskMapping mapKeyPath:@"id" toAttribute:@"weight_id"];
+    [taskMapping mapKeyPath:@"person_id" toAttribute:@"person_id"];
+    [taskMapping mapKeyPath:@"updated_at" toAttribute:@"updated_at"];
+    [taskMapping mapKeyPath:@"weight" toAttribute:@"weight"];
+    
+    RKObjectMapping* pweightSerializeMapping = [taskMapping inverseMapping];
+    
+    RKObjectManager* mgr = [RKObjectManager sharedManager]; 
+    //    [mgr.mappingProvider setSerializationMapping:pweightSerializeMapping forClass:[Weight class]];
+    //    [mgr.router routeClass:[Weight class] toResourcePath:[NSString stringWithFormat:@"/people/(person_id)/weights"]];
+    [[mgr mappingProvider ] setMapping:taskMapping forKeyPath:@"person.weights"];
+
     
     return YES;
 }

@@ -69,6 +69,9 @@
 - (IBAction)addWeight:(id)sender {
     NSLog(@"addWeight: personId: %d", personId);
     
+    RKObjectMapping* pmsg = [RKObjectMapping mappingForClass:[NSMutableDictionary class]];
+    
+    
     NSMutableDictionary* params = [[NSMutableDictionary alloc] init ];
     [params setValue:@"155.0" forKey:@"weight"];
     [params setValue:@"1" forKey:@"person_id"];

@@ -7,7 +7,7 @@
 //
 
 #import "People.h"
-#import "Person.h"
+#import "SDXPerson.h"
 #import "Weight.h"
 #include "stdlib.h"
 #include "SBJsonParser.h"
@@ -43,14 +43,14 @@ static People *instance=nil;
 }
 
 #warning "this is a lazy impl, fixme by using hashmap on personlist"
-- (Person *) getPersonByName: (NSString *) name{
-    for (Person *p in people){
+- (SDXPerson *) getPersonByName: (NSString *) name{
+    for (SDXPerson *p in people){
         if ([p.name isEqualToString:name]) return p;
     }
     return nil;
 }
 
-- (Person *) getPersonById: (NSInteger) id{
+- (SDXPerson *) getPersonById: (NSInteger) id{
     return [people objectAtIndex:id];
 }
 
@@ -68,7 +68,7 @@ static People *instance=nil;
         for (NSDictionary *o in dict) {
             NSString *username =[[o objectForKey:@"person"] objectForKey:@"name"];
             NSString* userid = [[o objectForKey:@"person"] objectForKey:@"id"];
-            Person *p = [[Person alloc]init];
+            SDXPerson *p = [[SDXPerson alloc]init];
             p.name = username;
             p.userid = [userid intValue];
             [people addObject:p];
