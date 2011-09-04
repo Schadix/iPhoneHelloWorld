@@ -6,9 +6,9 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "Person.h"
+#import "SDXPerson.h"
 
-@implementation Person
+@implementation SDXPerson
 
 @synthesize name;
 @synthesize userid;

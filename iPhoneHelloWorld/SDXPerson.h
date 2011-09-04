@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Person : NSObject {
+@interface SDXPerson : NSObject {
     NSString *name;
     int userid;
 @public    NSArray *weights; //type Weight
