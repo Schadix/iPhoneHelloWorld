@@ -71,15 +71,14 @@
     
     RKObjectMapping* pmsg = [RKObjectMapping mappingForClass:[NSMutableDictionary class]];
     
-    
     NSMutableDictionary* params = [[NSMutableDictionary alloc] init ];
-    [params setValue:@"155.0" forKey:@"weight"];
-    [params setValue:@"1" forKey:@"person_id"];
+    [params setValue:uiWeight.text forKey:@"weight"];
+    [params setValue:[NSString stringWithFormat:@"%d",personId] forKey:@"person_id"];
     [params setValue:@"2011-08-19T01:28:14Z" forKey:@"date"];
     NSMutableDictionary* main= [[NSMutableDictionary alloc] init ];
     [main setObject:params forKey:@"weight"];
     
-    [[RKClient sharedClient] post:@"/people/1/weights" params:main delegate:self];
+    [[RKClient sharedClient] post:[NSString stringWithFormat:@"/people/%d/weights",personId] params:main delegate:self];
     
     [main retain];
     [params retain];
